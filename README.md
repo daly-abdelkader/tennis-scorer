@@ -21,20 +21,23 @@ The application adheres to the following rules:
   -  Supports scenarios involving "Deuce" and "Advantage."
 # Prerequisites
 To run this application, you need:
+
     -  Java 17 or higher installed on your system.
     -  A Java IDE (e.g., IntelliJ IDEA, Eclipse) or a terminal for running the code.
 # Usage
 ## Input Format
 Provide a string where:
+
     -  'A' represents Player A winning a point.
     -  'B' represents Player B winning a point.
-    Example input: "ABABAA"
+    -  Example input: "ABABAA"
 
 ## Running the Application
 Run the TennisScorerApplication.main method that run calculateScore method with the input string
 
 ## Example Output
 For the input "ABABAA", the output will be:
+
     Player A : 15 / Player B : 0
     Player A : 15 / Player B : 15
     Player A : 30 / Player B : 15
