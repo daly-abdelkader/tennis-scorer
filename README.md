@@ -48,17 +48,26 @@ For the input "ABABAA", the output will be:
 # Implementation Details
 ## Classes and Methods
 ScoreCalculator :
-Contains the main logic for calculating scores and determining the winner.
 
-Key methods:
-  -  calculateScore(String input): Processes the input and prints the scores.
-  -  updateGameState(...): Updates the game state based on the current scores.
-  -  formatScore(...): Formats the score for display.
-  -  validateInput(String input): Validates the input string.
+    - Contains the main logic for processing input and printing scores.
+    - Validates input and delegates game logic to the GameContext.
 
-Enums :
-  -  Score: Represents the possible scores (0, 15, 30, 40).
-  -  GameState: Represents the game states (IN_PROGRESS, DEUCE, ADVANTAGE_A, ADVANTAGE_B, GAME_OVER).
+GameContext :
+
+    - Manages the current state of the game and delegates state-specific behavior to the appropriate GameState.
+
+GameState Interface :
+
+    - Defines methods for handling ball wins and formatting scores.
+    
+Concrete States :
+
+    - InProgressState: Handles normal scoring.
+    - DeuceState: Handles the "Deuce" scenario.
+    - AdvantageAState and AdvantageBState: Handle "Advantage" scenarios.
+    - GameOverState: Declares the winner and ends the game.
 
 Player Class :
-Encapsulates the state of a player, including their score.
+
+    - Encapsulates the state of a player, including their score.
+
